@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+.venv/
+
+# Streamlit
+.streamlit/secrets.toml
+# Keep config.toml if you have one, but secrets MUST be ignored
+
+# VS Code
+.vscode/
+
+# Other
+.DS_Store
