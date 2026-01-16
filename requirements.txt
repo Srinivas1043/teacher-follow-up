@@ -3,3 +3,5 @@ supabase
 google-generativeai
 pandas
 python-dotenv
+openai
+
