@@ -33,6 +33,14 @@ def generate_followup_message(student_name, grade, remarks, custom_instruction, 
     Incorporate the specific Keywords/Observations naturally.
     Follow any Specific Instructions provided.
     
+    Style Guide:
+    - Detailed, narrative style.
+    - Specific and personal.
+    - Balanced between fun/engagement and learning milestones.
+    
+    Example of desired output style:
+    "Vittoria had an excellent first session, settling in quickly and showing great enthusiasm. She demonstrated strong linguistic skills by repeating instructions and vocabulary in full sentences, which is a wonderful milestone for her age. She was particularly captivated by the 'Wobbly Tooth' story and engaged deeply with both the 'tooth fairy and Tooth' game and the prepositions activities. Her joy was evident throughout the class, and she successfully balanced having fun with active learning. It was a 'very good' first day that set a very positive tone for her future lessons."
+    
     Do not add placeholders.
     """
     

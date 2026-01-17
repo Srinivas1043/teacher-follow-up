@@ -117,8 +117,22 @@ def show_dashboard():
         if not students:
             st.warning("Please add students in the 'My Students' tab first.")
         else:
-            student_options = {s['name']: s for s in students}
-            selected_name = st.selectbox("Select Student", list(student_options.keys()))
+            # Filter by Grade
+            all_grades = sorted(list(set(s['grade'] for s in students if s.get('grade'))))
+            if all_grades:
+                # Add "All Grades" option
+                grade_options = ["All Grades"] + all_grades
+                selected_grade = st.selectbox("Filter by Grade/Class", grade_options)
+                
+                # Filter students based on selection
+                if selected_grade != "All Grades":
+                    students = [s for s in students if s.get('grade') == selected_grade]
+            
+            if not students:
+                st.warning(f"No students found in {selected_grade}.")
+            else:
+                student_options = {s['name']: s for s in students}
+                selected_name = st.selectbox("Select Student", list(student_options.keys()))
             selected_student = student_options[selected_name]
             
             # --- INPUTS ---
